@@ -13,7 +13,7 @@ import pc02.beans.ClienteNatural;
  * @author ESTHER
  */
 public class MetodoClienteNatural {
-    ArrayList<ClienteNatural> misClientesNaturales = new ArrayList<>();
+    ArrayList<ClienteNatural> misClientesNaturales = new ArrayList<ClienteNatural>();
 
     public ArrayList<ClienteNatural> getmisClientesNaturales() {
         return misClientesNaturales;
@@ -49,7 +49,6 @@ public class MetodoClienteNatural {
     
     public void MostrarTodo(){
         for(int i=0;i<misClientesNaturales.size();i++){
-            
             System.out.println("DNI: "+misClientesNaturales.get(i).getDNI());
             System.out.println("Nombre: "+misClientesNaturales.get(i).getNombre());
             System.out.println("Apellidos: "+misClientesNaturales.get(i).getApellidoPaterno()+" "+misClientesNaturales.get(i).getPellidoMaterno());
@@ -59,7 +58,7 @@ public class MetodoClienteNatural {
         }
     }
     
-    public void update(int cod, String DNI, String nombre, String ApellidoPaterno, String ApellidoMaterno, String telefono, String correo, String direccion){
+    public void Modificar(int cod, String DNI, String nombre, String ApellidoPaterno, String ApellidoMaterno, String telefono, String correo, String direccion){
         misClientesNaturales.get(cod).setDNI(DNI);
         misClientesNaturales.get(cod).setNombre(nombre);
         misClientesNaturales.get(cod).setApellidoPaterno(ApellidoPaterno);
@@ -69,11 +68,11 @@ public class MetodoClienteNatural {
         misClientesNaturales.get(cod).setDireccion(direccion);
     }
     
-    public void delete(int codigo){
+    public void Eliminar(int codigo){
         misClientesNaturales.remove(codigo);
     }
     
-    public void deleteAll(){
+    public void EliminarTodo(){
         misClientesNaturales.clear();
     }
 

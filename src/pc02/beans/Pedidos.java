@@ -17,11 +17,7 @@ public class Pedidos {
     private int codigoProducto;
 
     public Pedidos(){
-        NumeroPedido = 0;
-        FechaP = "";
-        Cantidad = 0;
-        cliente = "";
-        codigoProducto = 0;
+       
     }
     
     public Pedidos(int numeroP, String fechaP, int cantidad, String cliente, int codigoProducto) {

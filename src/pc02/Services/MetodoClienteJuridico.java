@@ -13,14 +13,25 @@ import java.util.ArrayList;
  * @author ESTHER
  */
 public class MetodoClienteJuridico {
-    private ArrayList<ClienteJuridico> misClientesJuridicos= new ArrayList<>();
+    private ArrayList<ClienteJuridico> misClientesJuridicos= new ArrayList<ClienteJuridico>();
 
     public ArrayList<ClienteJuridico> getmisClientesJuridicos() {
         return misClientesJuridicos;
     }
 
-    public void setisClientesJuridicos(ArrayList<ClienteJuridico> misClientesJuridicos) {
+    public void setMisClientesJuridicos(ArrayList<ClienteJuridico> misClientesJuridicos) {
         this.misClientesJuridicos = misClientesJuridicos;
+    }
+    
+    public int Buscar(String ruc){
+        int indice = -1;
+        for(int i=0;i<misClientesJuridicos.size();i++){
+            if(misClientesJuridicos.get(i).getRUC().equals(ruc)){
+                indice= i;
+                break;
+            }
+        }
+        return indice;
     }
     
     public void AgregarDatos(String nombreTienda, String RUC, String telefono, String correo, String direccion){
@@ -59,20 +70,11 @@ public class MetodoClienteJuridico {
         misClientesJuridicos.remove(codigo);
     }
     
-    public void deleteAll(){
+    public void EliminarTodo(){
         misClientesJuridicos.clear();
     }
     
-    public int Buscar(String ruc){
-        int indice = -1;
-        for(int i=0;i<misClientesJuridicos.size();i++){
-            if(misClientesJuridicos.get(i).getRUC().equals(ruc)){
-                indice= i;
-                break;
-            }
-        }
-        return indice;
-    }
+    
     
 }
 

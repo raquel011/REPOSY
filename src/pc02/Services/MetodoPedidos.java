@@ -13,7 +13,7 @@ import pc02.beans.Pedidos;
  * @author ESTHER
  */
 public class MetodoPedidos {
-    private ArrayList<Pedidos> MisPedidos = new ArrayList<>();
+    private ArrayList<Pedidos> MisPedidos = new ArrayList<Pedidos>();
     private int numP = 1;//Número de Pedidonp
 
     public ArrayList<Pedidos> getMisPedidos() {
@@ -62,7 +62,7 @@ public class MetodoPedidos {
         MisPedidos.get(cod).setCodigoProducto(producto);
     }
     
-    public void dEliminar(int id){
+    public void Eliminar(int id){
        MisPedidos.remove(id);
     }
     

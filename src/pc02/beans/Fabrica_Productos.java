@@ -17,11 +17,7 @@ public class Fabrica_Productos {
     private String UnidadMedida;
     
     public Fabrica_Productos(){
-        Codigo = 0;
-        Descripcion = "";
-        Precio = 0;
-        StockActual = 0;
-        UnidadMedida = "";
+     
     }
 
     public Fabrica_Productos(int codigo, String descripcion, double precio, int stock, String unidadMedida) {

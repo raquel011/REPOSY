@@ -18,9 +18,9 @@ public class GestionF_LALECHERA_CRUD {
     Scanner leer = new Scanner(System.in);
     
     MetodosFabricaProductos MFP = new  MetodosFabricaProductos();
-    MetodoPedidos MP = new MetodoPedidos();
     MetodoClienteNatural MCN= new  MetodoClienteNatural();
     MetodoClienteJuridico MCJ = new MetodoClienteJuridico();
+    MetodoPedidos MP = new MetodoPedidos();
 
     public MetodosFabricaProductos getMFP() {
         return MFP;

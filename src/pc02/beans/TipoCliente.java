@@ -15,10 +15,7 @@ public class TipoCliente {
     protected String Telefono;
     
     public TipoCliente(){
-        Direccion = "";
-        Correo = "";
-    
-        Telefono = "";
+            
     }
 
     public TipoCliente(String Direccion, String Correo, String Telefono) {
