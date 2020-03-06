@@ -68,6 +68,11 @@ public class Pedidos {
         this.codigoProducto = codigoProducto;
     }
 
+    @Override
+    public String toString() {
+        return "Pedidos{" + "NumeroPedido=" + NumeroPedido + ", FechaP=" + FechaP + ", Cantidad=" + Cantidad + ", cliente=" + cliente + ", codigoProducto=" + codigoProducto + '}';
+    }
+
     
     
 }

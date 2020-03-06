@@ -14,7 +14,7 @@ import pc02.beans.Fabrica_Productos;
  */
 public class MetodosFabricaProductos {
         private ArrayList<Fabrica_Productos> FP = new ArrayList<>();
-    private int numP = 1;//Codigo de Productos
+    private int numP = 1;
 
     public ArrayList<Fabrica_Productos> getFP() {
         return FP;
@@ -32,9 +32,9 @@ public class MetodosFabricaProductos {
         this.numP = np;
     }
     
-    public void AgregarProductos(String descripcion, double precio, int stock, String unidadMedida){
-        FP.add(new Fabrica_Productos(numP, descripcion, precio, stock, unidadMedida));
-        numP++;
+    public void AgregarProductos(Fabrica_Productos Fproducto){
+        FP.add(Fproducto);
+        //numP++;
     }
     
     public void Mostrar(int cod){
@@ -56,6 +56,7 @@ public class MetodosFabricaProductos {
     }
     
     public void Modificar(int id, String descripcion, double precio, int stock, String unidadMedida){
+        FP.get(id).setCodigo(id);
         FP.get(id).setDescripcion(descripcion);
         FP.get(id).setPrecio(precio);
         FP.get(id).setStock(stock);
@@ -90,6 +91,10 @@ public class MetodosFabricaProductos {
         int stock = FP.get(id).getStock();
         int newStock = FP.get(id).getStock() - cantidad;
         FP.get(id).setStock(newStock);
+    }
+
+    void AgregarProductos(int codigo, String descripcion, double precio, int stock, String unidadMedida) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

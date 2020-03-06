@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Main_Fabrica_LALECHERA {
     public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
         
         GestionF_LALECHERA_CRUD main = new GestionF_LALECHERA_CRUD();
         int opcion = 0;
@@ -30,7 +30,7 @@ public class Main_Fabrica_LALECHERA {
             System.out.println("8. MOSTRAR PEDIDO");
             System.out.println("9. Salir");
             
-            opcion = leer.nextInt();
+            opcion = entrada.nextInt();
             
             switch(opcion){
                 case 1:

@@ -94,6 +94,8 @@ public class GestionF_LALECHERA_CRUD {
     
     public void AgregarProducto(){
         System.out.println("Ingrese los datos del producto: ");
+        System.out.println("codigo");
+        int codigo=leer.nextInt();
         System.out.println("Tipo: ");
         String descripcion = leer.next();
         System.out.println("Precio: ");
@@ -103,7 +105,7 @@ public class GestionF_LALECHERA_CRUD {
         System.out.println("Unidad de Medida: ");
         String unidadMedida = leer.next();
         
-        MFP.AgregarProductos(descripcion, precio, stock, unidadMedida);
+        MFP.AgregarProductos(codigo,descripcion, precio, stock, unidadMedida);
         System.out.println("PRODUCTO REGISTRADO.");
     }
     

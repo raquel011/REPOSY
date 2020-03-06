@@ -14,44 +14,37 @@ import pc02.beans.Pedidos;
  */
 public class MetodoPedidos {
     private ArrayList<Pedidos> MisPedidos = new ArrayList<Pedidos>();
-    private int numP = 1;//Número de Pedidonp
+    //private int numP = 1;
 
     public ArrayList<Pedidos> getMisPedidos() {
         return MisPedidos;
     }
    
-    public void setP(ArrayList<Pedidos> p) {
+    public void setMisPedidos(ArrayList<Pedidos> p) {
         this.MisPedidos = p;
     }
-
-    public int getNumP() {
-        return numP;
-    }
-
-    public void setNumP(int np) {
-        this.numP = np;
+    public void AgregarPedidos(Pedidos p){
+        MisPedidos.add(p);
+        
     }
     
-    public void AgregarPedidos(String fechaP, int cantidad, String cliente, int producto){
-        MisPedidos.add(new Pedidos(numP,fechaP, cantidad, cliente, producto));
-        numP++;
-    }
-    
-    public void Mostrar(int codigo){
-        System.out.println("Número de Pedido: "+MisPedidos.get(codigo).getNumeroPedido());
-        System.out.println("Código del Cliente: "+MisPedidos.get(codigo).getCliente());
-        System.out.println("Código del Producto: "+MisPedidos.get(codigo).getCodigoProducto());
-        System.out.println("Cantidad: "+MisPedidos.get(codigo).getCantidad());
-        System.out.println("Fecha del Pedido: "+MisPedidos.get(codigo).getFechaP());
+    public void Mostrar(int numPedido){
+        System.out.println("Número de Pedido: "+MisPedidos.get(numPedido).getNumeroPedido());
+        System.out.println("Código del Cliente: "+MisPedidos.get(numPedido).getCliente());
+        System.out.println("Código del Producto: "+MisPedidos.get(numPedido).getCodigoProducto());
+        System.out.println("Cantidad: "+MisPedidos.get(numPedido).getCantidad());
+        System.out.println("Fecha del Pedido: "+MisPedidos.get(numPedido).getFechaP());
     }
     
     public void MostrarTodo(){
-        for(int i=0;i<MisPedidos.size();i++){
-            System.out.println("Número de Pedido: "+MisPedidos.get(i).getNumeroPedido());
+        for(Pedidos p:MisPedidos ){
+           
+            /*System.out.println("Número de Pedido: "+MisPedidos.get(i).getNumeroPedido());
             System.out.println("Código del Cliente: "+MisPedidos.get(i).getCliente());
             System.out.println("Código del Producto: "+MisPedidos.get(i).getCodigoProducto());
             System.out.println("Cantidad: "+MisPedidos.get(i).getCantidad());
             System.out.println("Fecha del Pedido: "+MisPedidos.get(i).getFechaP());
+*/
         }
     }
     
